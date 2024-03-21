@@ -8,9 +8,13 @@ HEADERS = {
 
 def scrape(url):
     """scrape the page source from URL"""
-    response = requests.get(url)
+    response = requests.get(url, headers=HEADERS)
     source = response.text
     return source
+
+
+def extract(source):
+    selectorlib.Extractor.from_yaml_file("extract.yaml")
 
 
 if __name__ == "__main__":
