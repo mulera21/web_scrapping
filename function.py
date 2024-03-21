@@ -19,3 +19,8 @@ def extract(source):
 
 def send_email():
     print("send email")
+
+
+def store(extracted):
+    with open("data.txt", "a") as file:
+        file.write(extracted + "\n")
