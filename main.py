@@ -12,4 +12,4 @@ if __name__ == "__main__":
     if extracted != "No upcoming tours":
         if extracted not in content:
             store(extracted)
-            send_email()
+            send_email(message="Hey Ed new event was found")
