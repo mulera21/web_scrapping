@@ -24,3 +24,7 @@ def send_email():
 def store(extracted):
     with open("data.txt", "a") as file:
         file.write(extracted + "\n")
+
+def read(extracted):
+    with open("data.txt", "r") as file:
+        return file.read()
